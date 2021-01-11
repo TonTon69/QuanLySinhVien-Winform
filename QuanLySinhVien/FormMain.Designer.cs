@@ -101,6 +101,7 @@ namespace QuanLySinhVien
             this.tsbSinhVien.Name = "tsbSinhVien";
             this.tsbSinhVien.Size = new System.Drawing.Size(92, 24);
             this.tsbSinhVien.Text = "Sinh viên";
+            this.tsbSinhVien.Click += new System.EventHandler(this.tsbSinhVien_Click);
             // 
             // tsbKhoa
             // 
@@ -109,6 +110,7 @@ namespace QuanLySinhVien
             this.tsbKhoa.Name = "tsbKhoa";
             this.tsbKhoa.Size = new System.Drawing.Size(67, 24);
             this.tsbKhoa.Text = "Khoa";
+            this.tsbKhoa.Click += new System.EventHandler(this.tsbKhoa_Click);
             // 
             // tsbMonHoc
             // 
@@ -117,6 +119,7 @@ namespace QuanLySinhVien
             this.tsbMonHoc.Name = "tsbMonHoc";
             this.tsbMonHoc.Size = new System.Drawing.Size(91, 24);
             this.tsbMonHoc.Text = "Môn học";
+            this.tsbMonHoc.Click += new System.EventHandler(this.tsbMonHoc_Click);
             // 
             // tsbNhapDiem
             // 
@@ -125,6 +128,7 @@ namespace QuanLySinhVien
             this.tsbNhapDiem.Name = "tsbNhapDiem";
             this.tsbNhapDiem.Size = new System.Drawing.Size(107, 24);
             this.tsbNhapDiem.Text = "Nhập điểm";
+            this.tsbNhapDiem.Click += new System.EventHandler(this.tsbNhapDiem_Click);
             // 
             // tsbXemDiem
             // 
@@ -133,6 +137,7 @@ namespace QuanLySinhVien
             this.tsbXemDiem.Name = "tsbXemDiem";
             this.tsbXemDiem.Size = new System.Drawing.Size(101, 24);
             this.tsbXemDiem.Text = "Xem điểm";
+            this.tsbXemDiem.Click += new System.EventHandler(this.tsbXemDiem_Click);
             // 
             // tsbThongKeKhoa
             // 
@@ -141,6 +146,7 @@ namespace QuanLySinhVien
             this.tsbThongKeKhoa.Name = "tsbThongKeKhoa";
             this.tsbThongKeKhoa.Size = new System.Drawing.Size(132, 24);
             this.tsbThongKeKhoa.Text = "Thống kê Khoa";
+            this.tsbThongKeKhoa.Click += new System.EventHandler(this.tsbThongKeKhoa_Click);
             // 
             // tsbThoat
             // 
@@ -150,6 +156,7 @@ namespace QuanLySinhVien
             this.tsbThoat.Name = "tsbThoat";
             this.tsbThoat.Size = new System.Drawing.Size(71, 24);
             this.tsbThoat.Text = "Thoát";
+            this.tsbThoat.Click += new System.EventHandler(this.tsbThoat_Click);
             // 
             // FormMain
             // 

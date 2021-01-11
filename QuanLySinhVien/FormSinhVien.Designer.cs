@@ -53,7 +53,6 @@ namespace QuanLySinhVien
             this.label5 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -65,6 +64,7 @@ namespace QuanLySinhVien
             this.colMaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -268,14 +268,6 @@ namespace QuanLySinhVien
             this.label6.TabIndex = 1;
             this.label6.Text = "Mã Khoa";
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(553, 125);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(225, 24);
-            this.comboBox2.TabIndex = 3;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -366,6 +358,13 @@ namespace QuanLySinhVien
             this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(553, 126);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(225, 22);
+            this.textBox5.TabIndex = 2;
+            // 
             // FormSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -374,10 +373,10 @@ namespace QuanLySinhVien
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label5);
@@ -423,7 +422,6 @@ namespace QuanLySinhVien
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -435,5 +433,6 @@ namespace QuanLySinhVien
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaKhoa;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }
