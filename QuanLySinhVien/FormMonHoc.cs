@@ -148,5 +148,6 @@ namespace QuanLySinhVien
             txtTenMH.Text = dgvMonHoc.Rows[selectedRow].Cells[1].Value.ToString();
             txtSoTiet.Text = dgvMonHoc.Rows[selectedRow].Cells[2].Value.ToString();
         }
+
     }
 }

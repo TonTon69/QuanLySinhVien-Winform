@@ -1,5 +1,4 @@
-﻿
-namespace QuanLySinhVien
+﻿namespace QuanLySinhVien
 {
     partial class FormMonHoc
     {
@@ -51,9 +50,9 @@ namespace QuanLySinhVien
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnUpdate = new System.Windows.Forms.ToolStripButton();
             this.btnCreate = new System.Windows.Forms.ToolStripButton();
             this.btnDelete = new System.Windows.Forms.ToolStripButton();
+            this.btnUpdate = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonHoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -207,7 +206,6 @@ namespace QuanLySinhVien
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -241,16 +239,6 @@ namespace QuanLySinhVien
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // btnUpdate
-            // 
-            this.btnUpdate.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
-            this.btnUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(29, 24);
-            this.btnUpdate.Text = "toolStripButton1";
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
             // btnCreate
             // 
             this.btnCreate.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -271,6 +259,16 @@ namespace QuanLySinhVien
             this.btnDelete.Text = "toolStripButton3";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
+            this.btnUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(29, 24);
+            this.btnUpdate.Text = "toolStripButton1";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // FormMonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -285,7 +283,6 @@ namespace QuanLySinhVien
             this.Controls.Add(this.txtMaMH);
             this.Controls.Add(this.label1);
             this.Name = "FormMonHoc";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh mục môn học";
             this.Load += new System.EventHandler(this.FormMonHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonHoc)).EndInit();

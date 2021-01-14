@@ -17,7 +17,7 @@ namespace QuanLySinhVien.Models
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int MaSo { get; set; }
+        public string MaSo { get; set; }
 
         [Required]
         [StringLength(50)]
