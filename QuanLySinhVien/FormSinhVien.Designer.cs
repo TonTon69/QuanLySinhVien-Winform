@@ -85,7 +85,7 @@
             this.txtMSSV.Location = new System.Drawing.Point(134, 42);
             this.txtMSSV.Name = "txtMSSV";
             this.txtMSSV.Size = new System.Drawing.Size(225, 22);
-            this.txtMSSV.TabIndex = 2;
+            this.txtMSSV.TabIndex = 1;
             // 
             // label2
             // 
@@ -126,7 +126,7 @@
             this.txtDiaChi.Location = new System.Drawing.Point(553, 42);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(225, 22);
-            this.txtDiaChi.TabIndex = 2;
+            this.txtDiaChi.TabIndex = 6;
             // 
             // label5
             // 
@@ -142,7 +142,7 @@
             this.txtDienThoai.Location = new System.Drawing.Point(553, 85);
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(225, 22);
-            this.txtDienThoai.TabIndex = 2;
+            this.txtDienThoai.TabIndex = 7;
             // 
             // label6
             // 
@@ -233,7 +233,7 @@
             this.dtpNgaySinh.Location = new System.Drawing.Point(134, 126);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(225, 22);
-            this.dtpNgaySinh.TabIndex = 6;
+            this.dtpNgaySinh.TabIndex = 3;
             // 
             // bindingNavigator2
             // 
@@ -368,7 +368,7 @@
             this.cmbKhoa.Location = new System.Drawing.Point(553, 122);
             this.cmbKhoa.Name = "cmbKhoa";
             this.cmbKhoa.Size = new System.Drawing.Size(225, 24);
-            this.cmbKhoa.TabIndex = 11;
+            this.cmbKhoa.TabIndex = 8;
             // 
             // optNam
             // 
@@ -376,7 +376,7 @@
             this.optNam.Location = new System.Drawing.Point(134, 164);
             this.optNam.Name = "optNam";
             this.optNam.Size = new System.Drawing.Size(58, 21);
-            this.optNam.TabIndex = 12;
+            this.optNam.TabIndex = 4;
             this.optNam.TabStop = true;
             this.optNam.Text = "Nam";
             this.optNam.UseVisualStyleBackColor = true;
@@ -387,7 +387,7 @@
             this.optNu.Location = new System.Drawing.Point(207, 164);
             this.optNu.Name = "optNu";
             this.optNu.Size = new System.Drawing.Size(47, 21);
-            this.optNu.TabIndex = 12;
+            this.optNu.TabIndex = 5;
             this.optNu.TabStop = true;
             this.optNu.Text = "Nữ";
             this.optNu.UseVisualStyleBackColor = true;

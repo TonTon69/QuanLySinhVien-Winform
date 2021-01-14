@@ -29,51 +29,81 @@ namespace QuanLySinhVien
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            this.btnXem = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.khoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLSVDataSet = new QuanLySinhVien.QLSVDataSet();
+            this.sinhVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbMaSo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.colTenMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvXemDiem = new System.Windows.Forms.DataGridView();
+            this.sinhVienTableAdapter = new QuanLySinhVien.QLSVDataSetTableAdapters.SinhVienTableAdapter();
+            this.khoaTableAdapter = new QuanLySinhVien.QLSVDataSetTableAdapters.KhoaTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.khoaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLSVDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sinhVienBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvXemDiem)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnXem
             // 
-            this.button1.Location = new System.Drawing.Point(538, 90);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 40);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Xem";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnXem.Location = new System.Drawing.Point(538, 90);
+            this.btnXem.Name = "btnXem";
+            this.btnXem.Size = new System.Drawing.Size(95, 40);
+            this.btnXem.TabIndex = 4;
+            this.btnXem.Text = "Xem";
+            this.btnXem.UseVisualStyleBackColor = true;
+            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
             // 
             // comboBox3
             // 
+            this.comboBox3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.khoaBindingSource, "TenKhoa", true));
+            this.comboBox3.DataSource = this.sinhVienBindingSource;
+            this.comboBox3.DisplayMember = "MaKhoa";
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(164, 106);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(176, 24);
-            this.comboBox3.TabIndex = 21;
+            this.comboBox3.TabIndex = 3;
+            // 
+            // khoaBindingSource
+            // 
+            this.khoaBindingSource.DataMember = "Khoa";
+            this.khoaBindingSource.DataSource = this.qLSVDataSet;
+            // 
+            // qLSVDataSet
+            // 
+            this.qLSVDataSet.DataSetName = "QLSVDataSet";
+            this.qLSVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sinhVienBindingSource
+            // 
+            this.sinhVienBindingSource.DataMember = "SinhVien";
+            this.sinhVienBindingSource.DataSource = this.qLSVDataSet;
             // 
             // comboBox2
             // 
+            this.comboBox2.DataSource = this.sinhVienBindingSource;
+            this.comboBox2.DisplayMember = "HoTen";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(164, 67);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(281, 24);
-            this.comboBox2.TabIndex = 22;
+            this.comboBox2.TabIndex = 2;
             // 
-            // comboBox1
+            // cmbMaSo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(164, 26);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(176, 24);
-            this.comboBox1.TabIndex = 23;
+            this.cmbMaSo.DataSource = this.sinhVienBindingSource;
+            this.cmbMaSo.DisplayMember = "MaSo";
+            this.cmbMaSo.FormattingEnabled = true;
+            this.cmbMaSo.Location = new System.Drawing.Point(164, 26);
+            this.cmbMaSo.Name = "cmbMaSo";
+            this.cmbMaSo.Size = new System.Drawing.Size(176, 24);
+            this.cmbMaSo.TabIndex = 1;
             // 
             // label3
             // 
@@ -102,48 +132,45 @@ namespace QuanLySinhVien
             this.label1.TabIndex = 18;
             this.label1.Text = "Mã số";
             // 
-            // dataGridView1
+            // dgvXemDiem
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colTenMH,
-            this.colDiem});
-            this.dataGridView1.Location = new System.Drawing.Point(59, 187);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(671, 235);
-            this.dataGridView1.TabIndex = 25;
+            this.dgvXemDiem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvXemDiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvXemDiem.Location = new System.Drawing.Point(59, 187);
+            this.dgvXemDiem.Name = "dgvXemDiem";
+            this.dgvXemDiem.RowHeadersWidth = 51;
+            this.dgvXemDiem.RowTemplate.Height = 24;
+            this.dgvXemDiem.Size = new System.Drawing.Size(671, 235);
+            this.dgvXemDiem.TabIndex = 25;
             // 
-            // colTenMH
+            // sinhVienTableAdapter
             // 
-            this.colTenMH.HeaderText = "Tên môn học";
-            this.colTenMH.MinimumWidth = 6;
-            this.colTenMH.Name = "colTenMH";
+            this.sinhVienTableAdapter.ClearBeforeFill = true;
             // 
-            // colDiem
+            // khoaTableAdapter
             // 
-            this.colDiem.HeaderText = "Điểm";
-            this.colDiem.MinimumWidth = 6;
-            this.colDiem.Name = "colDiem";
+            this.khoaTableAdapter.ClearBeforeFill = true;
             // 
             // FormXemDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dgvXemDiem);
+            this.Controls.Add(this.btnXem);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbMaSo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormXemDiem";
             this.Text = "FormXemDiem";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FormXemDiem_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.khoaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLSVDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sinhVienBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvXemDiem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,15 +178,18 @@ namespace QuanLySinhVien
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnXem;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbMaSo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTenMH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDiem;
+        private System.Windows.Forms.DataGridView dgvXemDiem;
+        private QLSVDataSet qLSVDataSet;
+        private System.Windows.Forms.BindingSource sinhVienBindingSource;
+        private QLSVDataSetTableAdapters.SinhVienTableAdapter sinhVienTableAdapter;
+        private System.Windows.Forms.BindingSource khoaBindingSource;
+        private QLSVDataSetTableAdapters.KhoaTableAdapter khoaTableAdapter;
     }
 }
