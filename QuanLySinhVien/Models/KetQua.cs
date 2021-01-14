@@ -12,7 +12,7 @@ namespace QuanLySinhVien.Models
         [Key]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int MaSo { get; set; }
+        public string MaSo { get; set; }
 
         [Key]
         [Column(Order = 1)]

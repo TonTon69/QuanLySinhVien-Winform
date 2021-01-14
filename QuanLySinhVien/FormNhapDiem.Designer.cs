@@ -29,17 +29,29 @@ namespace QuanLySinhVien
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtDiem = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.sinhVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLSVDataSet = new QuanLySinhVien.QLSVDataSet();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.monBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnNhap = new System.Windows.Forms.Button();
+            this.sinhVienTableAdapter = new QuanLySinhVien.QLSVDataSetTableAdapters.SinhVienTableAdapter();
+            this.ketQuaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ketQuaTableAdapter = new QuanLySinhVien.QLSVDataSetTableAdapters.KetQuaTableAdapter();
+            this.monTableAdapter = new QuanLySinhVien.QLSVDataSetTableAdapters.MonTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.sinhVienBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLSVDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.monBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketQuaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -81,29 +93,43 @@ namespace QuanLySinhVien
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(208, 204);
+            this.label5.Location = new System.Drawing.Point(202, 204);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 17);
             this.label5.TabIndex = 8;
             this.label5.Text = "Điểm";
             // 
-            // textBox5
+            // txtDiem
             // 
-            this.textBox5.Location = new System.Drawing.Point(310, 201);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(108, 22);
-            this.textBox5.TabIndex = 11;
+            this.txtDiem.Location = new System.Drawing.Point(310, 201);
+            this.txtDiem.Name = "txtDiem";
+            this.txtDiem.Size = new System.Drawing.Size(108, 22);
+            this.txtDiem.TabIndex = 11;
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.sinhVienBindingSource;
+            this.comboBox1.DisplayMember = "MaSo";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(310, 38);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(176, 24);
             this.comboBox1.TabIndex = 12;
             // 
+            // sinhVienBindingSource
+            // 
+            this.sinhVienBindingSource.DataMember = "SinhVien";
+            this.sinhVienBindingSource.DataSource = this.qLSVDataSet;
+            // 
+            // qLSVDataSet
+            // 
+            this.qLSVDataSet.DataSetName = "QLSVDataSet";
+            this.qLSVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // comboBox2
             // 
+            this.comboBox2.DataSource = this.sinhVienBindingSource;
+            this.comboBox2.DisplayMember = "HoTen";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(310, 79);
             this.comboBox2.Name = "comboBox2";
@@ -112,6 +138,8 @@ namespace QuanLySinhVien
             // 
             // comboBox3
             // 
+            this.comboBox3.DataSource = this.monBindingSource;
+            this.comboBox3.DisplayMember = "MaMH";
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(310, 118);
             this.comboBox3.Name = "comboBox3";
@@ -120,32 +148,57 @@ namespace QuanLySinhVien
             // 
             // comboBox4
             // 
+            this.comboBox4.DataSource = this.monBindingSource;
+            this.comboBox4.DisplayMember = "TenMH";
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(310, 158);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(281, 24);
             this.comboBox4.TabIndex = 12;
             // 
-            // button1
+            // monBindingSource
             // 
-            this.button1.Location = new System.Drawing.Point(496, 281);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 40);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Nhập";
-            this.button1.UseVisualStyleBackColor = true;
+            this.monBindingSource.DataMember = "Mon";
+            this.monBindingSource.DataSource = this.qLSVDataSet;
+            // 
+            // btnNhap
+            // 
+            this.btnNhap.Location = new System.Drawing.Point(496, 281);
+            this.btnNhap.Name = "btnNhap";
+            this.btnNhap.Size = new System.Drawing.Size(95, 40);
+            this.btnNhap.TabIndex = 13;
+            this.btnNhap.Text = "Nhập";
+            this.btnNhap.UseVisualStyleBackColor = true;
+            this.btnNhap.Click += new System.EventHandler(this.btnNhap_Click);
+            // 
+            // sinhVienTableAdapter
+            // 
+            this.sinhVienTableAdapter.ClearBeforeFill = true;
+            // 
+            // ketQuaBindingSource
+            // 
+            this.ketQuaBindingSource.DataMember = "KetQua";
+            this.ketQuaBindingSource.DataSource = this.qLSVDataSet;
+            // 
+            // ketQuaTableAdapter
+            // 
+            this.ketQuaTableAdapter.ClearBeforeFill = true;
+            // 
+            // monTableAdapter
+            // 
+            this.monTableAdapter.ClearBeforeFill = true;
             // 
             // FormNhapDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnNhap);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtDiem);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -153,6 +206,11 @@ namespace QuanLySinhVien
             this.Controls.Add(this.label1);
             this.Name = "FormNhapDiem";
             this.Text = "FormNhapDiem";
+            this.Load += new System.EventHandler(this.FormNhapDiem_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.sinhVienBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLSVDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.monBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ketQuaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,11 +222,18 @@ namespace QuanLySinhVien
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtDiem;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnNhap;
+        private QLSVDataSet qLSVDataSet;
+        private System.Windows.Forms.BindingSource sinhVienBindingSource;
+        private QLSVDataSetTableAdapters.SinhVienTableAdapter sinhVienTableAdapter;
+        private System.Windows.Forms.BindingSource ketQuaBindingSource;
+        private QLSVDataSetTableAdapters.KetQuaTableAdapter ketQuaTableAdapter;
+        private System.Windows.Forms.BindingSource monBindingSource;
+        private QLSVDataSetTableAdapters.MonTableAdapter monTableAdapter;
     }
 }
