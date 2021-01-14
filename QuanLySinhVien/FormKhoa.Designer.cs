@@ -41,6 +41,8 @@ namespace QuanLySinhVien
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnCreate = new System.Windows.Forms.ToolStripButton();
+            this.btnDelete = new System.Windows.Forms.ToolStripButton();
             this.btnUpdate = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaKhoa = new System.Windows.Forms.TextBox();
@@ -49,8 +51,6 @@ namespace QuanLySinhVien
             this.dgvKhoa = new System.Windows.Forms.DataGridView();
             this.colMaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCreate = new System.Windows.Forms.ToolStripButton();
-            this.btnDelete = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhoa)).BeginInit();
@@ -120,7 +120,6 @@ namespace QuanLySinhVien
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -154,6 +153,26 @@ namespace QuanLySinhVien
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
+            // btnCreate
+            // 
+            this.btnCreate.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCreate.Image = ((System.Drawing.Image)(resources.GetObject("btnCreate.Image")));
+            this.btnCreate.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(29, 24);
+            this.btnCreate.Text = "toolStripButton1";
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(29, 24);
+            this.btnDelete.Text = "toolStripButton2";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // btnUpdate
             // 
             this.btnUpdate.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -178,7 +197,7 @@ namespace QuanLySinhVien
             this.txtMaKhoa.Location = new System.Drawing.Point(271, 59);
             this.txtMaKhoa.Name = "txtMaKhoa";
             this.txtMaKhoa.Size = new System.Drawing.Size(247, 22);
-            this.txtMaKhoa.TabIndex = 2;
+            this.txtMaKhoa.TabIndex = 1;
             // 
             // label2
             // 
@@ -224,26 +243,6 @@ namespace QuanLySinhVien
             this.colTenKhoa.HeaderText = "Tên Khoa";
             this.colTenKhoa.MinimumWidth = 6;
             this.colTenKhoa.Name = "colTenKhoa";
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnCreate.Image = ((System.Drawing.Image)(resources.GetObject("btnCreate.Image")));
-            this.btnCreate.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(29, 24);
-            this.btnCreate.Text = "toolStripButton1";
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(29, 24);
-            this.btnDelete.Text = "toolStripButton2";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // FormKhoa
             // 
