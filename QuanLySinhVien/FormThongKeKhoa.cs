@@ -1,4 +1,5 @@
 ﻿using QuanLySinhVien.Models;
+using QuanLySinhVien.ViewDataList;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,22 +32,9 @@ namespace QuanLySinhVien
 
         private void btnXem_Click(object sender, EventArgs e)
         {
-            //var queryResult = (from a
-            //                   in db.Khoas
-            //                   join b in db.SinhViens on a.MaKhoa equals b.MaKhoa
-            //                   select new
-            //                   {
-            //                       MSSV = b.MaSo,
-            //                       HoTen = b.HoTen,
-            //                       NgaySinh = b.NgaySinh,
-            //                       GioiTinh = b.GioiTinh,
-            //                       DiaChi = b.DiaChi,
-            //                       DienThoai = b.DienThoai
-            //                   }).ToList();
-            //    dgvThongKeTheoKhoa.DataSource = queryResult;
             string con = global::QuanLySinhVien.Properties.Settings.Default.QLSVConnectionString;
             string str;
-            str = string.Format("Select MaSo, HoTen, NgaySinh, GioiTinh, DiaChi, DienThoai From Khoa a, SinhVien b where a.MaKhoa = b.MaKhoa", comboBox1.Text);
+            str = string.Format("Select b.MaSo, b.HoTen, b.NgaySinh, b.GioiTinh, b.DiaChi, b.DienThoai From Khoa a, SinhVien b where a.MaKhoa = b.MaKhoa and b.MaKhoa = '" + comboBox1.Text + "'");
             SqlDataAdapter da = new SqlDataAdapter(str, con);
             DataSet ds = new DataSet();
             da.Fill(ds);

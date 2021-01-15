@@ -31,22 +31,13 @@ namespace QuanLySinhVien
 
         private void btnXem_Click(object sender, EventArgs e)
         {
-            //string con = global::QuanLySinhVien.Properties.Settings.Default.QLSVConnectionString;
-            //string str;
-            //str = string.Format("Select TenMH, Diem From KetQua kq, Mon mh where kq.MaMH = mh.MaMH and MaSo = {0}", cmbMaSo.Text);
-            //SqlDataAdapter da = new SqlDataAdapter(str, con);
-            //DataSet ds = new DataSet();
-            //da.Fill(ds);
-            //dgvXemDiem.DataSource = ds.Tables[0];
-            var queryResult = (from a
-                               in db.KetQuas
-                               join b in db.Mons on a.MaMH equals b.MaMH
-                               select new
-                               {
-                                  TenMH = b.TenMH,
-                                  Diem = a.Diem,
-                               }).ToList();
-            dgvXemDiem.DataSource = queryResult;
+            string con = global::QuanLySinhVien.Properties.Settings.Default.QLSVConnectionString;
+            string str;
+            str = string.Format("Select TenMH, Diem From KetQua kq, Mon mh where kq.MaMH = mh.MaMH and MaSo = {0}", cmbMaSo.Text);
+            SqlDataAdapter da = new SqlDataAdapter(str, con);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dgvXemDiem.DataSource = ds.Tables[0];
         }
     }
 }
