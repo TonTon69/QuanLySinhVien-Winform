@@ -42,6 +42,7 @@ namespace QuanLySinhVien
             this.tsbXemDiem = new System.Windows.Forms.ToolStripButton();
             this.tsbThongKeKhoa = new System.Windows.Forms.ToolStripButton();
             this.tsbThoat = new System.Windows.Forms.ToolStripButton();
+            this.tsbThongKe = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -87,7 +88,8 @@ namespace QuanLySinhVien
             this.tsbNhapDiem,
             this.tsbXemDiem,
             this.tsbThongKeKhoa,
-            this.tsbThoat});
+            this.tsbThoat,
+            this.tsbThongKe});
             this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(984, 27);
@@ -158,6 +160,15 @@ namespace QuanLySinhVien
             this.tsbThoat.Text = "Thoát";
             this.tsbThoat.Click += new System.EventHandler(this.tsbThoat_Click);
             // 
+            // tsbThongKe
+            // 
+            this.tsbThongKe.Image = ((System.Drawing.Image)(resources.GetObject("tsbThongKe.Image")));
+            this.tsbThongKe.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbThongKe.Name = "tsbThongKe";
+            this.tsbThongKe.Size = new System.Drawing.Size(153, 24);
+            this.tsbThongKe.Text = "Thống kê điểm SV";
+            this.tsbThongKe.Click += new System.EventHandler(this.tsbThongKe_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -192,6 +203,7 @@ namespace QuanLySinhVien
         private System.Windows.Forms.ToolStripButton tsbXemDiem;
         private System.Windows.Forms.ToolStripButton tsbThongKeKhoa;
         private System.Windows.Forms.ToolStripButton tsbThoat;
+        private System.Windows.Forms.ToolStripButton tsbThongKe;
     }
 }
 

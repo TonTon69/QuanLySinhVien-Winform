@@ -124,5 +124,20 @@ namespace QuanLySinhVien
             frmTKKhoa.MdiParent = this;
             frmTKKhoa.Show();
         }
+
+        private void tsbThongKe_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "FormThongKeDiemSV")
+                {
+                    f.Activate();
+                    return;
+                }
+            }
+            FormThongKeDiemSV frmTKKDiemSV = new FormThongKeDiemSV();
+            frmTKKDiemSV.MdiParent = this;
+            frmTKKDiemSV.Show();
+        }
     }
 }
