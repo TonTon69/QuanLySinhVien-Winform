@@ -32,16 +32,16 @@ namespace QuanLySinhVien
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbMonHoc = new System.Windows.Forms.ComboBox();
-            this.btnXemBaoCao = new System.Windows.Forms.Button();
+            this.monBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLSVDataSet = new QuanLySinhVien.QLSVDataSet();
+            this.btnXemBaoCao = new System.Windows.Forms.Button();
             this.sinhVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sinhVienTableAdapter = new QuanLySinhVien.QLSVDataSetTableAdapters.SinhVienTableAdapter();
-            this.monBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.monTableAdapter = new QuanLySinhVien.QLSVDataSetTableAdapters.MonTableAdapter();
             this.rptvThongKeSV = new Microsoft.Reporting.WinForms.ReportViewer();
+            ((System.ComponentModel.ISupportInitialize)(this.monBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLSVDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sinhVienBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.monBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,6 +64,17 @@ namespace QuanLySinhVien
             this.cmbMonHoc.Name = "cmbMonHoc";
             this.cmbMonHoc.Size = new System.Drawing.Size(241, 33);
             this.cmbMonHoc.TabIndex = 1;
+            this.cmbMonHoc.SelectedValueChanged += new System.EventHandler(this.cmbMonHoc_SelectedValueChanged);
+            // 
+            // monBindingSource
+            // 
+            this.monBindingSource.DataMember = "Mon";
+            this.monBindingSource.DataSource = this.qLSVDataSet;
+            // 
+            // qLSVDataSet
+            // 
+            this.qLSVDataSet.DataSetName = "QLSVDataSet";
+            this.qLSVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnXemBaoCao
             // 
@@ -75,11 +86,6 @@ namespace QuanLySinhVien
             this.btnXemBaoCao.UseVisualStyleBackColor = true;
             this.btnXemBaoCao.Click += new System.EventHandler(this.btnXemBaoCao_Click);
             // 
-            // qLSVDataSet
-            // 
-            this.qLSVDataSet.DataSetName = "QLSVDataSet";
-            this.qLSVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // sinhVienBindingSource
             // 
             this.sinhVienBindingSource.DataMember = "SinhVien";
@@ -88,11 +94,6 @@ namespace QuanLySinhVien
             // sinhVienTableAdapter
             // 
             this.sinhVienTableAdapter.ClearBeforeFill = true;
-            // 
-            // monBindingSource
-            // 
-            this.monBindingSource.DataMember = "Mon";
-            this.monBindingSource.DataSource = this.qLSVDataSet;
             // 
             // monTableAdapter
             // 
@@ -119,9 +120,9 @@ namespace QuanLySinhVien
             this.Name = "FormThongKeDiemSV";
             this.Text = "In báo cáo";
             this.Load += new System.EventHandler(this.FormThongKeDiemSV_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.monBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLSVDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sinhVienBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.monBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -26,7 +26,6 @@ namespace QuanLySinhVien
             this.khoaTableAdapter.Fill(this.qLSVDataSet.Khoa);
             // TODO: This line of code loads data into the 'qLSVDataSet.SinhVien' table. You can move, or remove it, as needed.
             this.sinhVienTableAdapter.Fill(this.qLSVDataSet.SinhVien);
-
         }
 
         private void btnXem_Click(object sender, EventArgs e)

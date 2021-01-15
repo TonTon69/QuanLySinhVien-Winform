@@ -1,5 +1,4 @@
 ﻿using QuanLySinhVien.Models;
-using QuanLySinhVien.ViewDataList;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,9 +27,16 @@ namespace QuanLySinhVien
             // TODO: This line of code loads data into the 'qLSVDataSet.SinhVien' table. You can move, or remove it, as needed.
             this.sinhVienTableAdapter.Fill(this.qLSVDataSet.SinhVien);
 
+            this.comboBox1.SelectedIndex = -1;
+            this.comboBox2.SelectedIndex = -1;
         }
 
         private void btnXem_Click(object sender, EventArgs e)
+        {
+            BindGrid();
+        }
+
+        private void BindGrid()
         {
             string con = global::QuanLySinhVien.Properties.Settings.Default.QLSVConnectionString;
             string str;
@@ -39,6 +45,11 @@ namespace QuanLySinhVien
             DataSet ds = new DataSet();
             da.Fill(ds);
             dgvThongKeTheoKhoa.DataSource = ds.Tables[0];
+        }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            BindGrid();
         }
     }
 }

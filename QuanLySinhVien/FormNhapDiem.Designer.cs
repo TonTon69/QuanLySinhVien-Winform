@@ -41,8 +41,8 @@ namespace QuanLySinhVien
             this.qLSVDataSet = new QuanLySinhVien.QLSVDataSet();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.monBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.btnNhap = new System.Windows.Forms.Button();
             this.sinhVienTableAdapter = new QuanLySinhVien.QLSVDataSetTableAdapters.SinhVienTableAdapter();
             this.ketQuaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -146,6 +146,11 @@ namespace QuanLySinhVien
             this.comboBox3.Size = new System.Drawing.Size(176, 24);
             this.comboBox3.TabIndex = 12;
             // 
+            // monBindingSource
+            // 
+            this.monBindingSource.DataMember = "Mon";
+            this.monBindingSource.DataSource = this.qLSVDataSet;
+            // 
             // comboBox4
             // 
             this.comboBox4.DataSource = this.monBindingSource;
@@ -155,11 +160,6 @@ namespace QuanLySinhVien
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(281, 24);
             this.comboBox4.TabIndex = 12;
-            // 
-            // monBindingSource
-            // 
-            this.monBindingSource.DataMember = "Mon";
-            this.monBindingSource.DataSource = this.qLSVDataSet;
             // 
             // btnNhap
             // 
@@ -192,7 +192,7 @@ namespace QuanLySinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 405);
             this.Controls.Add(this.btnNhap);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);

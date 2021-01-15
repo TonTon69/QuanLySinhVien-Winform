@@ -40,12 +40,11 @@ namespace QuanLySinhVien
                 var check = db.KetQuas.FirstOrDefault(x => x.MaSo == comboBox1.Text && x.MaMH == comboBox3.Text);
                 if (check != null)
                 {
-                    KetQua kq = new KetQua()
-                    {
-                        MaSo = comboBox1.Text,
-                        MaMH = comboBox3.Text,
-                        Diem = double.Parse(txtDiem.Text),
-                    };
+                    KetQua kq = new KetQua();
+                    kq.MaSo = comboBox1.Text;
+                    kq.MaMH = comboBox3.Text;
+                    kq.Diem = double.Parse(txtDiem.Text);
+                    
                     db.KetQuas.Add(kq);
                     db.SaveChanges();
                     MessageBox.Show("Nhập điểm thành công!", "Thông báo", MessageBoxButtons.OK);

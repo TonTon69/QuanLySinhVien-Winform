@@ -76,7 +76,7 @@ namespace QuanLySinhVien
             this.comboBox2.Location = new System.Drawing.Point(171, 68);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(281, 24);
-            this.comboBox2.TabIndex = 30;
+            this.comboBox2.TabIndex = 2;
             // 
             // khoaBindingSource
             // 
@@ -96,7 +96,8 @@ namespace QuanLySinhVien
             this.comboBox1.Location = new System.Drawing.Point(171, 27);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(176, 24);
-            this.comboBox1.TabIndex = 31;
+            this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             // 
             // label2
             // 

@@ -53,5 +53,10 @@ namespace QuanLySinhVien
         {
             BindGrid();
         }
+
+        private void cmbMonHoc_SelectedValueChanged(object sender, EventArgs e)
+        {
+            BindGrid();
+        }
     }
 }
