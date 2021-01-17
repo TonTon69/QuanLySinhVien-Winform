@@ -103,12 +103,6 @@
     <Compile Include="FormNhapDiem.Designer.cs">
       <DependentUpon>FormNhapDiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormNhapMonHoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormNhapMonHoc.Designer.cs">
-      <DependentUpon>FormNhapMonHoc.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>

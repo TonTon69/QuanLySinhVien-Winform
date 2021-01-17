@@ -35,20 +35,18 @@ namespace QuanLySinhVien
             try
             {
                 if (txtDiem.Text == "")
-                    throw new Exception("Vui lòng nhập đầy đủ thông tin");
+                    throw new Exception("Vui lòng nhập điểm cho sinh viên");
 
-                var check = db.KetQuas.FirstOrDefault(x => x.MaSo == comboBox1.Text && x.MaMH == comboBox3.Text);
-                if (check != null)
-                {
-                    KetQua kq = new KetQua();
-                    kq.MaSo = comboBox1.Text;
-                    kq.MaMH = comboBox3.Text;
-                    kq.Diem = double.Parse(txtDiem.Text);
-                    
+                    KetQua kq = new KetQua()
+                    {
+                        MaSo = cmbMaSo.Text,
+                        MaMH = cmbMaMH.Text,
+                        Diem = Convert.ToDouble(txtDiem.Text),
+                    };
                     db.KetQuas.Add(kq);
                     db.SaveChanges();
-                    MessageBox.Show("Nhập điểm thành công!", "Thông báo", MessageBoxButtons.OK);
-                }
+
+                    MessageBox.Show("Thêm điểm thành công!", "Thông báo", MessageBoxButtons.OK);
             }
             catch (Exception ex)
             {

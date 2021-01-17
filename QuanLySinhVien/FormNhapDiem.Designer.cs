@@ -36,11 +36,11 @@ namespace QuanLySinhVien
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDiem = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbMaSo = new System.Windows.Forms.ComboBox();
             this.sinhVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLSVDataSet = new QuanLySinhVien.QLSVDataSet();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbMaMH = new System.Windows.Forms.ComboBox();
             this.monBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.btnNhap = new System.Windows.Forms.Button();
@@ -106,15 +106,15 @@ namespace QuanLySinhVien
             this.txtDiem.Size = new System.Drawing.Size(108, 22);
             this.txtDiem.TabIndex = 11;
             // 
-            // comboBox1
+            // cmbMaSo
             // 
-            this.comboBox1.DataSource = this.sinhVienBindingSource;
-            this.comboBox1.DisplayMember = "MaSo";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(310, 38);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(176, 24);
-            this.comboBox1.TabIndex = 12;
+            this.cmbMaSo.DataSource = this.sinhVienBindingSource;
+            this.cmbMaSo.DisplayMember = "MaSo";
+            this.cmbMaSo.FormattingEnabled = true;
+            this.cmbMaSo.Location = new System.Drawing.Point(310, 38);
+            this.cmbMaSo.Name = "cmbMaSo";
+            this.cmbMaSo.Size = new System.Drawing.Size(176, 24);
+            this.cmbMaSo.TabIndex = 12;
             // 
             // sinhVienBindingSource
             // 
@@ -136,15 +136,15 @@ namespace QuanLySinhVien
             this.comboBox2.Size = new System.Drawing.Size(281, 24);
             this.comboBox2.TabIndex = 12;
             // 
-            // comboBox3
+            // cmbMaMH
             // 
-            this.comboBox3.DataSource = this.monBindingSource;
-            this.comboBox3.DisplayMember = "MaMH";
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(310, 118);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(176, 24);
-            this.comboBox3.TabIndex = 12;
+            this.cmbMaMH.DataSource = this.monBindingSource;
+            this.cmbMaMH.DisplayMember = "MaMH";
+            this.cmbMaMH.FormattingEnabled = true;
+            this.cmbMaMH.Location = new System.Drawing.Point(310, 118);
+            this.cmbMaMH.Name = "cmbMaMH";
+            this.cmbMaMH.Size = new System.Drawing.Size(176, 24);
+            this.cmbMaMH.TabIndex = 12;
             // 
             // monBindingSource
             // 
@@ -195,9 +195,9 @@ namespace QuanLySinhVien
             this.ClientSize = new System.Drawing.Size(800, 405);
             this.Controls.Add(this.btnNhap);
             this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.cmbMaMH);
             this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbMaSo);
             this.Controls.Add(this.txtDiem);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -223,9 +223,9 @@ namespace QuanLySinhVien
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtDiem;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbMaSo;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbMaMH;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Button btnNhap;
         private QLSVDataSet qLSVDataSet;
