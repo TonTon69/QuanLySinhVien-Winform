@@ -105,6 +105,7 @@ namespace QuanLySinhVien
             this.txtDiem.Name = "txtDiem";
             this.txtDiem.Size = new System.Drawing.Size(108, 22);
             this.txtDiem.TabIndex = 11;
+            this.txtDiem.TextChanged += new System.EventHandler(this.txtDiem_TextChanged);
             // 
             // cmbMaSo
             // 

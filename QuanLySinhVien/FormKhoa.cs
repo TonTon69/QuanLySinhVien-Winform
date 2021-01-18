@@ -54,23 +54,30 @@ namespace QuanLySinhVien
                 if (txtMaKhoa.Text == "" || txtTenKhoa.Text == "")
                     throw new Exception("Vui lòng nhập đầy đủ thông tin khoa");
 
-                int selectedRow = GetSelectedRow(txtMaKhoa.Text);
-                if (selectedRow == -1)
+                var checkMaKhoa = db.Khoas.FirstOrDefault(x => x.MaKhoa == txtMaKhoa.Text);
+                if (checkMaKhoa != null)
+                    throw new Exception("Mã khoa đã tồn tại!!");
+                else
                 {
-                    selectedRow = dgvKhoa.Rows.Add();
-                    Khoa khoa = new Khoa()
+                    int selectedRow = GetSelectedRow(txtMaKhoa.Text);
+                    if (selectedRow == -1)
                     {
-                        MaKhoa = txtMaKhoa.Text,
-                        TenKhoa = txtTenKhoa.Text
-                    };
-                    db.Khoas.Add(khoa);
-                    db.SaveChanges();
+                        selectedRow = dgvKhoa.Rows.Add();
+                        Khoa khoa = new Khoa()
+                        {
+                            MaKhoa = txtMaKhoa.Text,
+                            TenKhoa = txtTenKhoa.Text
+                        };
+                        db.Khoas.Add(khoa);
+                        db.SaveChanges();
 
-                    dgvKhoa.Rows[selectedRow].Cells[0].Value = khoa.MaKhoa;
-                    dgvKhoa.Rows[selectedRow].Cells[1].Value = khoa.TenKhoa;
+                        dgvKhoa.Rows[selectedRow].Cells[0].Value = khoa.MaKhoa;
+                        dgvKhoa.Rows[selectedRow].Cells[1].Value = khoa.TenKhoa;
 
-                    MessageBox.Show("Thêm mới dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK);
+                        MessageBox.Show("Thêm mới dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK);
+                    }
                 }
+
             }
             catch (Exception ex)
             {
@@ -140,6 +147,12 @@ namespace QuanLySinhVien
             int selectedRow = e.RowIndex;
             txtMaKhoa.Text = dgvKhoa.Rows[selectedRow].Cells[0].Value.ToString();
             txtTenKhoa.Text = dgvKhoa.Rows[selectedRow].Cells[1].Value.ToString();
+        }
+
+        private void txtMaKhoa_TextChanged(object sender, EventArgs e)
+        {
+            txtMaKhoa.MaxLength = 6;
+            
         }
     }
 }

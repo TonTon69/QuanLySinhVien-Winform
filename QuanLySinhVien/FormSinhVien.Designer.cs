@@ -86,6 +86,7 @@
             this.txtMSSV.Name = "txtMSSV";
             this.txtMSSV.Size = new System.Drawing.Size(225, 22);
             this.txtMSSV.TabIndex = 1;
+            this.txtMSSV.TextChanged += new System.EventHandler(this.txtMSSV_TextChanged);
             // 
             // label2
             // 
@@ -299,6 +300,7 @@
             // 
             this.toolStripTextBox1.AccessibleName = "Position";
             this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(50, 27);
             this.toolStripTextBox1.Text = "0";

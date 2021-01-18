@@ -37,21 +37,29 @@ namespace QuanLySinhVien
                 if (txtDiem.Text == "")
                     throw new Exception("Vui lòng nhập điểm cho sinh viên");
 
-                    KetQua kq = new KetQua()
-                    {
-                        MaSo = cmbMaSo.Text,
-                        MaMH = cmbMaMH.Text,
-                        Diem = Convert.ToDouble(txtDiem.Text),
-                    };
-                    db.KetQuas.Add(kq);
-                    db.SaveChanges();
+                if (double.Parse(txtDiem.Text) > 10 || double.Parse(txtDiem.Text) < 0)
+                    throw new Exception("Vui lòng nhập điểm trong khoảng từ 0-10!!!");
 
-                    MessageBox.Show("Thêm điểm thành công!", "Thông báo", MessageBoxButtons.OK);
+                KetQua kq = new KetQua()
+                {
+                    MaSo = cmbMaSo.Text,
+                    MaMH = cmbMaMH.Text,
+                    Diem = Convert.ToDouble(txtDiem.Text),
+                };
+                db.KetQuas.Add(kq);
+                db.SaveChanges();
+
+                MessageBox.Show("Thêm điểm thành công!", "Thông báo", MessageBoxButtons.OK);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtDiem_TextChanged(object sender, EventArgs e)
+        {
+            txtDiem.MaxLength = 4;
         }
     }
 }

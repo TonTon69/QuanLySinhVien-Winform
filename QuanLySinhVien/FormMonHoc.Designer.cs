@@ -116,6 +116,7 @@
             this.txtMaMH.Name = "txtMaMH";
             this.txtMaMH.Size = new System.Drawing.Size(186, 22);
             this.txtMaMH.TabIndex = 1;
+            this.txtMaMH.TextChanged += new System.EventHandler(this.txtMaMH_TextChanged);
             // 
             // label1
             // 
@@ -141,6 +142,7 @@
             this.txtSoTiet.Name = "txtSoTiet";
             this.txtSoTiet.Size = new System.Drawing.Size(186, 22);
             this.txtSoTiet.TabIndex = 3;
+            this.txtSoTiet.TextChanged += new System.EventHandler(this.txtSoTiet_TextChanged);
             // 
             // bindingNavigator1
             // 
@@ -206,6 +208,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";

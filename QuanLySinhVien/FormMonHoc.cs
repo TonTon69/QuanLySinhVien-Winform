@@ -56,6 +56,12 @@ namespace QuanLySinhVien
                 if (txtMaMH.Text == "" || txtTenMH.Text == "" || txtSoTiet.Text == "")
                     throw new Exception("Vui lòng nhập đầy đủ thông tin môn học");
 
+                var checkMaMH = db.Mons.FirstOrDefault(x => x.MaMH == txtMaMH.Text);
+                if (checkMaMH != null)
+                {
+                    throw new Exception("Mã môn học đã tồn tại!!");
+                }
+
                 int selectedRow = GetSelectedRow(txtMaMH.Text);
                 if (selectedRow == -1)
                 {
@@ -149,5 +155,14 @@ namespace QuanLySinhVien
             txtSoTiet.Text = dgvMonHoc.Rows[selectedRow].Cells[2].Value.ToString();
         }
 
+        private void txtMaMH_TextChanged(object sender, EventArgs e)
+        {
+            txtMaMH.MaxLength = 10;
+        }
+
+        private void txtSoTiet_TextChanged(object sender, EventArgs e)
+        {
+            txtSoTiet.MaxLength = 2;
+        }
     }
 }

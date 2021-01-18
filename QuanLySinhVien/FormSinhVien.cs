@@ -73,6 +73,12 @@ namespace QuanLySinhVien
                 if (txtMSSV.Text == "" || txtHoTen.Text == "" || txtDiaChi.Text == "" || txtDienThoai.Text == "")
                     throw new Exception("Vui lòng nhập đầy đủ thông tin sinh viên");
 
+                var checkMssv = db.SinhViens.FirstOrDefault(x=>x.MaSo == txtMSSV.Text);
+                if(checkMssv != null)
+                {
+                    throw new Exception("Mã sinh viên đã tồn tại!!");
+                }
+
                 int selectedRow = GetSelectedRow(txtMSSV.Text);
                 if (selectedRow == -1)
                 {
@@ -189,6 +195,11 @@ namespace QuanLySinhVien
             txtDiaChi.Text = dgvSinhVien.Rows[selectedRow].Cells[4].Value.ToString();
             txtDienThoai.Text = dgvSinhVien.Rows[selectedRow].Cells[5].Value.ToString();
             cmbKhoa.Text = dgvSinhVien.Rows[selectedRow].Cells[6].Value.ToString();
+        }
+
+        private void txtMSSV_TextChanged(object sender, EventArgs e)
+        {
+            txtMSSV.MaxLength = 11;
         }
     }
 }

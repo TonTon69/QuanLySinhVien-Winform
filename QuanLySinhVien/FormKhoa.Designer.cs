@@ -70,6 +70,7 @@
             this.txtMaKhoa.Name = "txtMaKhoa";
             this.txtMaKhoa.Size = new System.Drawing.Size(247, 22);
             this.txtMaKhoa.TabIndex = 1;
+            this.txtMaKhoa.TextChanged += new System.EventHandler(this.txtMaKhoa_TextChanged);
             // 
             // label2
             // 
@@ -180,6 +181,7 @@
             // 
             this.toolStripTextBox1.AccessibleName = "Position";
             this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(50, 27);
             this.toolStripTextBox1.Text = "0";
